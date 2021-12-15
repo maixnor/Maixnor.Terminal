@@ -26,6 +26,8 @@
     public void SubmitCommand(string Command)
     {
         Boxes.Add(new Box(Command, Command));
+        if (Command is "clear")
+            Boxes.Clear();
         StateHasChanged();
     }
 
