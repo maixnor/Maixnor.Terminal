@@ -1,12 +1,12 @@
 @using Index = Maixnor.Terminal.Pages.Index
 
+<pre>
 @* fix input in place *@
-<pre>guest@maixnor: ~$ @Element.Command</pre>
-
-@* display response indented *@
-<pre style="text-indent: 10px">
+guest@maixnor: ~$ @Element.Command
+@* display response *@
 @Element.Response
 </pre>
+
 @code {
 
     [Parameter]
