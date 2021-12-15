@@ -1,0 +1,33 @@
+﻿@page "/"
+
+<PageTitle>Maixnor Term</PageTitle>
+
+<pre>
+=================================================
+**                                             **
+**       Welcome to the Maixnor Terminal       **
+**                                             **
+=================================================
+</pre>
+
+@foreach (var box in Boxes)
+{
+    <Block Element="box"/>
+}
+
+<Input Parent="this"/>
+
+@code {
+    [CascadingParameter] 
+    public List<Box> Boxes { get; set; } = new ();
+
+    public record Box(string Command, string Response);
+
+    public void SubmitCommand(string Command)
+    {
+        Boxes.Add(new Box(Command, Command));
+        StateHasChanged();
+    }
+
+}
+
