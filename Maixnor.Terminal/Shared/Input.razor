@@ -1,11 +1,10 @@
 @using Index = Maixnor.Terminal.Pages.Index
-<div class="row">
-    <pre>
-        <b>guest@maixnor: ~$ </b>
-        <EditForm Model="this" OnSubmit="Submit">
-            <InputText @bind-Value="Command" style="background: #000; color: white"></InputText>
-        </EditForm>
-    </pre>
+
+<div >
+    <pre>guest@maixnor: ~$ @Command</pre>
+    <EditForm class="none" Model="this" OnSubmit="Submit">
+        <InputText  @bind-Value="Command"></InputText>
+    </EditForm>
 </div>
 
 @code {

@@ -1,4 +1,5 @@
 ﻿@page "/"
+@inject IJSRuntime js
 
 <PageTitle>Maixnor Term</PageTitle>
 
@@ -28,6 +29,8 @@
         Boxes.Add(new Box(Command, Command));
         if (Command is "clear")
             Boxes.Clear();
+        if (Command is "exit")
+            js.InvokeAsync<string>("window.close");
         StateHasChanged();
     }
 
