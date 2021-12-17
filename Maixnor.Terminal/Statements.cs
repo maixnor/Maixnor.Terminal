@@ -9,13 +9,15 @@ Just hammer away at your keyboard and
 find out what the commands do “¯\_(ツ)_/¯“.
 
 Here is a list of commands:
+  * maixnorfetch
   * help
   * clear
-  * exit
   * projects
+  * source
   * github
   * linkedin
   * email
+  * exit
 
 If stranded hit the tab key once. 
 It focuses the terminal input.
@@ -37,12 +39,25 @@ Happy emailing ^^.
 I have done a lot during my education and career.
 This includes:
 
-  * The terminal you are currently using
+  * The terminal you are currently using 
+        shortcut to the code: 'source'
   * A neural network for the MNIST dataset
   * A Webshop based on the northwind database
   * A Time Management system for work
   * A Minesweeper App for Android
 
 Have a look on my 'github' account.
+";
+
+    public static string MaixnorFetch =>
+@"
+       ||\      /||         TM            guest@maixnor
+       ||\\    //||                       -------------
+       || \\  // ||                       OS: Who could guess?
+       ||  \\//  ||                       Kernel: 5.15.8-zen1-1-zen
+       ||        ||   \\ //               Uptime: too long
+       ||        ||    \//                Packages: 12298.34
+       ||        ||    /\\                Shell: mxnr
+       ||        ||   // \\               Terminal: Maixnor                                     
 ";
 }

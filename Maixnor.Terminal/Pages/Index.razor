@@ -3,15 +3,7 @@
 
 <PageTitle>Maixnor Term</PageTitle>
 
-<pre>
-=================================================
-||                                             ||
-||       Welcome to the Maixnor Terminal       ||
-||                                             ||
-||           type help if helpless             ||
-||                                             ||
-=================================================
-</pre>
+@* desperately needs replacement *@
 
 @foreach (var box in Boxes)
 {
@@ -40,7 +32,7 @@
         StateHasChanged();
     }
 
-    /// Actions define changes to the State of the application
+    // Statements define changes to the State of the application
     Dictionary<string, Action<Index>> Statements = new()
     {
         {
@@ -59,14 +51,33 @@
             "projects",     index => index.Boxes.Add(new Box("projects", Terminal.Statements.Projects))
         },
         {
-            "the answer to life, the universe, and everything",     index => index.Boxes.Add(new Box("the answer to life, the universe, and everything", "42"))
+            "maixnorfetch",     index => index.Boxes.Add(new Box("maixnorfetch", Terminal.Statements.MaixnorFetch))
+        },
+        {
+            "42",           index => index.Boxes.Add(new Box( "42", "the answer to life, the universe, and everything"))
         },
         {
             "github",       index => index.js.InvokeVoidAsync("open", "https://github.com/maixnor", "_blank")
         },
         {
+            "source",       index => index.js.InvokeVoidAsync("open", "https://github.com/maixnor/Maixnor.Terminal", "_blank")
+        },
+        {
             "linkedin",     index => index.js.InvokeVoidAsync("open", "https://www.linkedin.com/in/benjamin-meixner-a7b82617a/", "_blank")
         },
     };
-}
 
+    protected override void OnInitialized()
+    {
+        SubmitCommand("maixnorfetch");
+        SubmitCommand("help");
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            js.InvokeVoidAsync("focusInput");
+        }
+    }
+}

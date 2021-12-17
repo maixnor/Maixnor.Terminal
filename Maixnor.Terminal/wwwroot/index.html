@@ -22,6 +22,15 @@
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <script>
+        function focusInput() {
+            let element = '#autofocus';
+            if (element instanceof HTMLElement) {
+                element.focus()
+                console.log('input has been focused')
+            }
+        }
+    </script>
 </body>
 
 </html>
