@@ -63,4 +63,18 @@
             "linkedin",     index => index.js.InvokeVoidAsync("open", "https://www.linkedin.com/in/benjamin-meixner-a7b82617a/", "_blank")
         },
     };
+
+    protected override void OnInitialized()
+    {
+        SubmitCommand("neofetch");
+        SubmitCommand("help");
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            js.InvokeVoidAsync("focusInput");
+        }
+    }
 }
