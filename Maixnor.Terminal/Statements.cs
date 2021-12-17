@@ -11,11 +11,11 @@ find out what the commands do “¯\_(ツ)_/¯“.
 Here is a list of commands:
   * help
   * clear
-  * exit
   * projects
   * github
   * linkedin
   * email
+  * exit
 
 If stranded hit the tab key once. 
 It focuses the terminal input.
