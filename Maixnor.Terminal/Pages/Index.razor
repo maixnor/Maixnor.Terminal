@@ -28,23 +28,33 @@
 
     public void SubmitCommand(string Command)
     {
-        Boxes.Add(new Box(Command, Command));
-        if (Command is "clear")
-            Boxes.Clear();
-        if (Command is "exit")
-            js.InvokeAsync<string>("window.close");
+        if (!Statements.ContainsKey(Command))
+        {
+            Boxes.Add(new Box(Command, $"The command '{Command}' is not recognized."));
+        }
+        else
+        {
+            Statements[Command].Invoke(this); // execute Statements
+        }
+
         StateHasChanged();
     }
 
-    Dictionary<string, Action<Index>> Actions = new()
+    /// Actions define changes to the State of the application
+    Dictionary<string, Action<Index>> Statements = new()
     {
         {
-            "clear", (index) => { index.Boxes.Clear(); }
+            "clear",    index => index.Boxes.Clear()
         },
         {
-            "clear", (index) => { index.js.InvokeVoidAsync("window.close"); }
-        }
+            "exit",     index => index.js.InvokeVoidAsync("window.close")
+        },
+        {
+            "help",     index => index.Boxes.Add(new Box("help", Terminal.Statements.Help))
+        },
+        {
+            "email",     index => index.Boxes.Add(new Box("email", Terminal.Statements.Email))
+        },
     };
-
 }
 
