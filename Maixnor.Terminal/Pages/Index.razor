@@ -44,16 +44,28 @@
     Dictionary<string, Action<Index>> Statements = new()
     {
         {
-            "clear",    index => index.Boxes.Clear()
+            "clear",        index => index.Boxes.Clear()
         },
         {
-            "exit",     index => index.js.InvokeVoidAsync("window.close")
+            "exit",         index => index.js.InvokeVoidAsync("window.close")
         },
         {
-            "help",     index => index.Boxes.Add(new Box("help", Terminal.Statements.Help))
+            "help",         index => index.Boxes.Add(new Box("help", Terminal.Statements.Help))
         },
         {
-            "email",     index => index.Boxes.Add(new Box("email", Terminal.Statements.Email))
+            "email",        index => index.Boxes.Add(new Box("email", Terminal.Statements.Email))
+        },
+        {
+            "projects",     index => index.Boxes.Add(new Box("projects", Terminal.Statements.Projects))
+        },
+        {
+            "the answer to life, the universe, and everything",     index => index.Boxes.Add(new Box("the answer to life, the universe, and everything", "42"))
+        },
+        {
+            "github",       index => index.js.InvokeVoidAsync("open", "https://github.com/maixnor", "_blank")
+        },
+        {
+            "linkedin",     index => index.js.InvokeVoidAsync("open", "https://www.linkedin.com/in/benjamin-meixner-a7b82617a/", "_blank")
         },
     };
 }
