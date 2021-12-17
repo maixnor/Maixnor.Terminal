@@ -9,7 +9,7 @@ Just hammer away at your keyboard and
 find out what the commands do “¯\_(ツ)_/¯“.
 
 Here is a list of commands:
-  * neofetch
+  * maixnorfetch
   * help
   * clear
   * projects
@@ -49,7 +49,7 @@ This includes:
 Have a look on my 'github' account.
 ";
 
-    public static string Neofetch =>
+    public static string MaixnorFetch =>
 @"
        ||\      /||         TM            guest@maixnor
        ||\\    //||                       -------------
