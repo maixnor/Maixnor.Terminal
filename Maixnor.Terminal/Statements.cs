@@ -13,6 +13,7 @@ Here is a list of commands:
   * help
   * clear
   * projects
+  * source
   * github
   * linkedin
   * email
