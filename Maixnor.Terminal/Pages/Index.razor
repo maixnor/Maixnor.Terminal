@@ -5,16 +5,6 @@
 
 @* desperately needs replacement *@
 
-<pre>
-=================================================
-||                                             ||
-||       Welcome to the Maixnor Terminal       ||
-||                                             ||
-||           type help if helpless             ||
-||                                             ||
-=================================================
-</pre>
-
 @foreach (var box in Boxes)
 {
     <Block Element="box"/>
@@ -61,6 +51,9 @@
             "projects",     index => index.Boxes.Add(new Box("projects", Terminal.Statements.Projects))
         },
         {
+            "neofetch",     index => index.Boxes.Add(new Box("neofetch", Terminal.Statements.Neofetch))
+        },
+        {
             "42",           index => index.Boxes.Add(new Box( "42", "the answer to life, the universe, and everything"))
         },
         {
@@ -71,4 +64,3 @@
         },
     };
 }
-
