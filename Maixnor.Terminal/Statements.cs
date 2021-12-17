@@ -9,6 +9,7 @@ Just hammer away at your keyboard and
 find out what the commands do “¯\_(ツ)_/¯“.
 
 Here is a list of commands:
+  * neofetch
   * help
   * clear
   * projects
@@ -37,7 +38,8 @@ Happy emailing ^^.
 I have done a lot during my education and career.
 This includes:
 
-  * The terminal you are currently using
+  * The terminal you are currently using 
+        shortcut to the code: 'source'
   * A neural network for the MNIST dataset
   * A Webshop based on the northwind database
   * A Time Management system for work
