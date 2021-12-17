@@ -36,5 +36,15 @@
         StateHasChanged();
     }
 
+    Dictionary<string, Action<Index>> Actions = new()
+    {
+        {
+            "clear", (index) => { index.Boxes.Clear(); }
+        },
+        {
+            "clear", (index) => { index.js.InvokeVoidAsync("window.close"); }
+        }
+    };
+
 }
 
