@@ -10,7 +10,16 @@
     <Block Element="box"/>
 }
 
-<Input Parent="this"/>
+@* shall not be visible *@
+@* <EditForm Model="this" OnSubmit="SubmitCommand"> *@
+@*     <InputText id="autofocus" @bind-value="_command" @bind-value:event="oninput"></InputText> *@
+@* </EditForm> *@
+
+<form @onsubmit="SubmitCommand">
+    <input @bind-value="_command" @bind-value:event="oninput" @onfocusin="StopBlinking" @onfocusout="StartBlinking"/>
+</form>
+
+<pre>guest@maixnor: ~$ <span class="highlight">@(_command)</span><span id="blinker" class="blinking">_</span> </pre>
 
 @code {
     [CascadingParameter] 
@@ -18,22 +27,28 @@
 
     public record Box(string Command, string Response);
 
-    public void SubmitCommand(string Command)
+    private string? _command = string.Empty;
+
+    private void SubmitCommand()
     {
-        if (!Statements.ContainsKey(Command))
+        if (string.IsNullOrEmpty(_command))
+            return;
+        if (!_statements.ContainsKey(_command))
         {
-            Boxes.Add(new Box(Command, $"The command '{Command}' is not recognized."));
+            Boxes.Add(new Box(_command, $"The command '{_command}' is not recognized."));
         }
         else
         {
-            Statements[Command].Invoke(this); // execute Statements
+            _statements[_command].Invoke(this); // execute Statements
         }
+
+        _command = string.Empty;
 
         StateHasChanged();
     }
 
     // Statements define changes to the State of the application
-    Dictionary<string, Action<Index>> Statements = new()
+    readonly Dictionary<string, Action<Index>> _statements = new()
     {
         {
             "clear",        index => index.Boxes.Clear()
@@ -42,16 +57,16 @@
             "exit",         index => index.js.InvokeVoidAsync("window.close")
         },
         {
-            "help",         index => index.Boxes.Add(new Box("help", Terminal.Statements.Help))
+            "help",         index => index.Boxes.Add(new Box("help", Statements.Help))
         },
         {
-            "email",        index => index.Boxes.Add(new Box("email", Terminal.Statements.Email))
+            "email",        index => index.Boxes.Add(new Box("email", Statements.Email))
         },
         {
-            "projects",     index => index.Boxes.Add(new Box("projects", Terminal.Statements.Projects))
+            "projects",     index => index.Boxes.Add(new Box("projects", Statements.Projects))
         },
         {
-            "maixnorfetch",     index => index.Boxes.Add(new Box("maixnorfetch", Terminal.Statements.MaixnorFetch))
+            "maixnorfetch",     index => index.Boxes.Add(new Box("maixnorfetch", Statements.MaixnorFetch))
         },
         {
             "42",           index => index.Boxes.Add(new Box( "42", "the answer to life, the universe, and everything"))
@@ -69,8 +84,8 @@
 
     protected override void OnInitialized()
     {
-        SubmitCommand("maixnorfetch");
-        SubmitCommand("help");
+        _statements["maixnorfetch"].Invoke(this);
+        _statements["help"].Invoke(this);
     }
 
     protected override void OnAfterRender(bool firstRender)
@@ -80,4 +95,13 @@
             js.InvokeVoidAsync("focusInput");
         }
     }
+
+    private void StopBlinking()
+    {
+    }
+
+    private void StartBlinking()
+    {
+    }
+
 }
