@@ -1,5 +1,10 @@
 ﻿@import url(https://fonts.googleapis.com/css?family=VT323);
 
+.bold {
+    font-weight: bold;
+    color: #00ee00;
+}
+
 .console-base {
     font-size: 1.6em;
     font-family: 'VT323', Courier, monospace;
@@ -11,44 +16,13 @@
 }
 
 input {
-    background: transparent;
-    border: none;
-    display: grid;  
-    width: max-content;
-    color: #00ee00;
-    position: absolute;
     transform: translateX(-500%);
 }
 
-@keyframes scroll {
-    0% { height: 0 }
-    100% { height: 100%; }
-}
-
-@keyframes type {
-    from { width: 0; }
-}
-
-@keyframes type2 {
-    0%{width: 0;}
-    50%{width: 0;}
-    100%{ width: 100%; }
-}
-
-@keyframes blink {
-    to{opacity: .0;}
-}
-
-@keyframes scan {
-    from { top: 0 }
-    to { top: 100% }
-}
-
-.blinking:before {
-    background: white;
+input:after {
     width: 0.2rem;
-    animation:
-        blink 750ms infinite;    
+    animation: blink 750ms infinite;
+    background: #00dd00;
 }
 
 * {

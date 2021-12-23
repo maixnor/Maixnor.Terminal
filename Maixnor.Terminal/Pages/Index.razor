@@ -3,23 +3,23 @@
 
 <PageTitle>Maixnor Term</PageTitle>
 
-@* desperately needs replacement *@
+@* is not visible *@
+<form @onsubmit="SubmitCommand">
+    <input id="autofocus" autocomplete="off" @bind-value="_command" @bind-value:event="oninput" @onfocusin="StopBlinking" @onfocusout="StartBlinking"/>
+</form>
 
 @foreach (var box in Boxes)
 {
     <Block Element="box"/>
 }
 
-@* shall not be visible *@
-@* <EditForm Model="this" OnSubmit="SubmitCommand"> *@
-@*     <InputText id="autofocus" @bind-value="_command" @bind-value:event="oninput"></InputText> *@
-@* </EditForm> *@
-
-<form @onsubmit="SubmitCommand">
-    <input @bind-value="_command" @bind-value:event="oninput" @onfocusin="StopBlinking" @onfocusout="StartBlinking"/>
-</form>
-
-<pre>guest@maixnor: ~$ <span class="highlight">@(_command)</span><span id="blinker" class="blinking">_</span> </pre>
+<pre>
+guest@maixnor: ~$ <bold class="bold">@(_command)</bold>
+@if (_focus)
+{
+    <span>_</span>
+} 
+</pre>
 
 @code {
     [CascadingParameter] 
@@ -28,6 +28,7 @@
     public record Box(string Command, string Response);
 
     private string? _command = string.Empty;
+    private bool _focus;
 
     private void SubmitCommand()
     {
@@ -88,20 +89,14 @@
         _statements["help"].Invoke(this);
     }
 
-    protected override void OnAfterRender(bool firstRender)
-    {
-        if (firstRender)
-        {
-            js.InvokeVoidAsync("focusInput");
-        }
-    }
-
     private void StopBlinking()
     {
+        _focus = true;
     }
 
     private void StartBlinking()
     {
+        _focus = false;
     }
 
 }

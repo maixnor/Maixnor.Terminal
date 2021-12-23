@@ -53,11 +53,11 @@ Have a look on my 'github' account.
 @"
        ||\      /||         TM            guest@maixnor
        ||\\    //||                       -------------
-       || \\  // ||                       OS: Who could guess?
+       || \\  // ||                       OS: Can you guess?
        ||  \\//  ||                       Kernel: 5.15.8-zen1-1-zen
        ||        ||   \\ //               Uptime: too long
        ||        ||    \//                Packages: 12298.34
        ||        ||    /\\                Shell: mxnr
-       ||        ||   // \\               Terminal: Maixnor                                     
+       ||        ||   // \\               Terminal: Maixnor
 ";
 }
