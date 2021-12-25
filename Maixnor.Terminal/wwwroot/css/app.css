@@ -2,7 +2,7 @@
 
 .bold {
     font-weight: bold;
-    color: #00ff00;
+    color: #ff0000;
 }
 
 .console-base {
@@ -21,8 +21,8 @@ input {
 
 html,
 body {
-    background: #383838;
-    color: #00dd00;
+    background: #242d26;
+    color: #ffae00;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -33,7 +33,7 @@ body {
 }
 
 .console-base:before {
-    background: linear-gradient(#202020 40%, rgba(16, 16, 16, 0.1) 40%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.03));
+    background: linear-gradient(#202020 20%, rgba(16, 16, 16, 0.1) 40%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.03));
     background-size: 100% 2px, 10px 100%;
     content: "";
     position: fixed;
