@@ -3,11 +3,6 @@
 
 <PageTitle>Maixnor Term</PageTitle>
 
-@* is not visible *@
-<form @onsubmit="SubmitCommand">
-    <input id="autofocus" autocomplete="off" @bind-value="_command" @bind-value:event="oninput" @onfocusin="StopBlinking" @onfocusout="StartBlinking"/>
-</form>
-
 @foreach (var box in Boxes)
 {
     <Block Element="box"/>
@@ -20,6 +15,11 @@ guest@maixnor: ~$ <bold class="bold">@(_command)</bold>
     <span>_</span>
 } 
 </pre>
+
+@* is not visible *@
+<form @onsubmit="SubmitCommand">
+    <input id="focus" autocomplete="off" @bind-value="_command" @bind-value:event="oninput" @onfocusin="StopBlinking" @onfocusout="StartBlinking"/>
+</form>
 
 @code {
     [CascadingParameter] 
