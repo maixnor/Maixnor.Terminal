@@ -28,19 +28,20 @@ guest@maixnor: ~$ <bold class="bold">@(_command)</bold>
     public record Box(string Command, string Response);
 
     private string? _command = string.Empty;
+    private string? Command => _command?.ToLower();
     private bool _focus;
 
     private void SubmitCommand()
     {
-        if (string.IsNullOrEmpty(_command))
+        if (string.IsNullOrEmpty(Command))
             return;
-        if (!_statements.ContainsKey(_command))
+        if (!_statements.ContainsKey(Command))
         {
-            Boxes.Add(new Box(_command, $"The command '{_command}' is not recognized."));
+            Boxes.Add(new Box(Command, $"The command '{Command}' is not recognized."));
         }
         else
         {
-            _statements[_command].Invoke(this); // execute Statements
+            _statements[Command].Invoke(this); // execute Statements
         }
 
         _command = string.Empty;
