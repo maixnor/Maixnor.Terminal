@@ -19,8 +19,8 @@ Here is a list of commands:
   * email
   * exit
 
-If stranded hit the tab key once. 
-It focuses the terminal input.
+Click anywhere to initiate typing mode and put in some commands.
+There is also an easter egg :).
 ";
 
     public static string Email =>
@@ -50,14 +50,26 @@ Have a look on my 'github' account.
 ";
 
     public static string MaixnorFetch =>
-@"
-       ||\      /||         TM            guest@maixnor
-       ||\\    //||                       -------------
-       || \\  // ||                       OS: Can you guess?
-       ||  \\//  ||                       Kernel: 5.15.8-zen1-1-zen
-       ||        ||   \\ //               Uptime: too long
-       ||        ||    \//                Packages: 12298.34
-       ||        ||    /\\                Shell: mxnr
-       ||        ||   // \\               Terminal: Maixnor
+        
+@" __       __          __                                          
+|  \     /  \        |  \                                         
+| ▓▓\   /  ▓▓ ______  \▓▓__    __ _______   ______   ______       
+| ▓▓▓\ /  ▓▓▓|      \|  \  \  /  \       \ /      \ /      \      
+| ▓▓▓▓\  ▓▓▓▓ \▓▓▓▓▓▓\ ▓▓\▓▓\/  ▓▓ ▓▓▓▓▓▓▓\  ▓▓▓▓▓▓\  ▓▓▓▓▓▓\     
+| ▓▓\▓▓ ▓▓ ▓▓/      ▓▓ ▓▓ >▓▓  ▓▓| ▓▓  | ▓▓ ▓▓  | ▓▓ ▓▓   \▓▓     
+| ▓▓ \▓▓▓| ▓▓  ▓▓▓▓▓▓▓ ▓▓/  ▓▓▓▓\| ▓▓  | ▓▓ ▓▓__/ ▓▓ ▓▓           
+| ▓▓  \▓ | ▓▓\▓▓    ▓▓ ▓▓  ▓▓ \▓▓\ ▓▓  | ▓▓\▓▓    ▓▓ ▓▓           
+ \▓▓      \▓▓ \▓▓▓▓▓▓▓\▓▓\▓▓   \▓▓\▓▓   \▓▓ \▓▓▓▓▓▓ \▓▓           
+ ________                                __                   __ 
+|        \                              |  \                 |  \
+ \▓▓▓▓▓▓▓▓ ______   ______  ______ ____  \▓▓_______   ______ | ▓▓
+   | ▓▓   /      \ /      \|      \    \|  \       \ |      \| ▓▓
+   | ▓▓  |  ▓▓▓▓▓▓\  ▓▓▓▓▓▓\ ▓▓▓▓▓▓\▓▓▓▓\ ▓▓ ▓▓▓▓▓▓▓\ \▓▓▓▓▓▓\ ▓▓
+   | ▓▓  | ▓▓    ▓▓ ▓▓   \▓▓ ▓▓ | ▓▓ | ▓▓ ▓▓ ▓▓  | ▓▓/      ▓▓ ▓▓
+   | ▓▓  | ▓▓▓▓▓▓▓▓ ▓▓     | ▓▓ | ▓▓ | ▓▓ ▓▓ ▓▓  | ▓▓  ▓▓▓▓▓▓▓ ▓▓
+   | ▓▓   \▓▓     \ ▓▓     | ▓▓ | ▓▓ | ▓▓ ▓▓ ▓▓  | ▓▓\▓▓    ▓▓ ▓▓
+    \▓▓    \▓▓▓▓▓▓▓\▓▓      \▓▓  \▓▓  \▓▓\▓▓\▓▓   \▓▓ \▓▓▓▓▓▓▓\▓▓
+                                                                                                                       
 ";
+    
 }
