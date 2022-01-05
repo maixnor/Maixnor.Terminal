@@ -71,6 +71,12 @@ guest@maixnor: ~$ <bold class="bold">@(_command)</bold>
             "maixnorfetch",     index => index.Boxes.Add(new Box("maixnorfetch", Statements.MaixnorFetch))
         },
         {
+            "pwa",          index => index.Boxes.Add(new Box( "pwa", Statements.Pwa))
+        },
+        {
+            "easter",       index => index.Boxes.Add(new Box( "easter", Statements.Easter))
+        },
+        {
             "42",           index => index.Boxes.Add(new Box( "42", "the answer to life, the universe, and everything"))
         },
         {
