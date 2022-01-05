@@ -23,7 +23,7 @@ This PWA has been made using Blazor WASM.
 ";
     public static string Help => 
 @"
-No need to worry, you are in a shell.
+No need to worry, you are in a terminal.
 Just hammer away at your keyboard and 
 find out what the commands do “¯\_(ツ)_/¯“.
 
@@ -41,7 +41,7 @@ Here is a list of commands:
 
 Click anywhere to initiate typing mode 
 and put in some commands.
-There is also an 'easter' egg :).
+I have hidden an 'easter' egg :).
 ";
 
     public static string Email =>
@@ -57,10 +57,7 @@ Happy emailing ^^.
 
     public static string Easter =>
 @"
-You have not found the easter egg.... yet.
-
-In any case you can find it in the 'source'
-rather easily.
+You have not found the easter egg... yet.
 
 Here are the clues one by one. 
 
@@ -71,7 +68,10 @@ Here are the clues one by one.
   'The Hitchhiker's Guide to the Galaxy'.
 
 * It may have something to do with the
-  packages installed pacman.
+  installed packages (maixnorfetch).
+
+In any case you can find it in the 'source'
+easily if you know what you're looking for.
 ";
 
     public static string Projects => 
@@ -97,7 +97,7 @@ Have a look on my 'github' account.
 | ▓▓\   /  ▓▓__    __ _______   ______       OS: Who can guess?
 | ▓▓▓\ /  ▓▓▓  \  /  \       \ /      \      Kernel: 5.15.8-zen1-1-zen
 | ▓▓▓▓\  ▓▓▓▓\▓▓\/  ▓▓ ▓▓▓▓▓▓▓\  ▓▓▓▓▓▓\     Uptime: too long
-| ▓▓\▓▓ ▓▓ ▓▓ >▓▓  ▓▓| ▓▓  | ▓▓ ▓▓   \▓▓     Packages: 42 (pacman)
+| ▓▓\▓▓ ▓▓ ▓▓ >▓▓  ▓▓| ▓▓  | ▓▓ ▓▓   \▓▓     Packages: 42.1415 (pacman)
 | ▓▓ \▓▓▓| ▓▓/  ▓▓▓▓\| ▓▓  | ▓▓ ▓▓           Shell: mxnr
 | ▓▓  \▓ | ▓▓  ▓▓ \▓▓\ ▓▓  | ▓▓ ▓▓           Terminal: maixnor
  \▓▓      \▓▓\▓▓   \▓▓\▓▓   \▓▓\▓▓           Weather: look out the window!
