@@ -5,6 +5,14 @@ This is the Maixnor Terminal, which is my very own interactive terminal running 
 
 It is currently operating as an [Azure Static App](https://gray-moss-0be855b03.azurestaticapps.net).
 
+### Inspiration
+
+I really love the linux operating system and use it as my daily driver.
+Therefore I really love terminals and will choose a good CLI over a GUI any time.
+So when I wanted to have a personal/portfolio website I thought about packing it in a 
+terminal-styled web app. And as for as I am concerned my idea is unique.
+I also wanted to try out Blazor and dotnet 6, so here goes the tech stack.
+
 ### What to do here
 
 You might be here for the easter egg, go ahead and look through the files. Happy looking :)
