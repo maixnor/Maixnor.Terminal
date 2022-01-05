@@ -1,7 +1,7 @@
 
 # Welcome fellow human!
 
-This is the Maixnor Terminal, which is my own terminal.
+This is the Maixnor Terminal, which is my very own interactive terminal running in the browser.
 
 It is currently operating as an [Azure Static App](https://gray-moss-0be855b03.azurestaticapps.net).
 
