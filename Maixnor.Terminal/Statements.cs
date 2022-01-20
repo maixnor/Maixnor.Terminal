@@ -33,10 +33,11 @@ Here is a list of commands:
   * clear
   * projects
   * pwa
+  * whoami
+  * email
   * source
   * github
   * linkedin
-  * email
   * exit
 
 Click anywhere to initiate typing mode 
@@ -52,7 +53,7 @@ I have a few emails to choose from:
   * reach me at school:   mei18930@spengergasse.at
   * my work email:        benjamin.meixner@centauri.at
 
-Happy emailing ^^.  
+Happy emailing ^^
 ";
 
     public static string Easter =>
@@ -90,7 +91,6 @@ Have a look on my 'github' account.
 ";
 
     public static string MaixnorFetch =>
-        
 @" 
  __       __                                 guest@maixnor
 |  \     /  \                                -------------

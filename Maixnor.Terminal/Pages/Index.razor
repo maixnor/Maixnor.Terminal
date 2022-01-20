@@ -79,6 +79,9 @@ guest@maixnor: ~$ <bold class="bold">@(_command)</bold>
             "42",           index => index.Boxes.Add(new Box( "42", "the answer to life, the universe, and everything"))
         },
         {
+            "whoami",       index => index.Boxes.Add(new Box( "whoami", "That is a good question indeed. Who even are you? Who am I?"))
+        },
+        {
             "github",       index => index.js.InvokeVoidAsync("open", "https://github.com/maixnor", "_blank")
         },
         {
